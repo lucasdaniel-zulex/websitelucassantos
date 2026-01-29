@@ -1,0 +1,12 @@
+# Ignorar a pasta de dependências (muito pesada)
+node_modules/
+
+# Ignorar ficheiros com configurações do sistema (Mac)
+.DS_Store
+
+# Ignorar ficheiros de ambiente com senhas
+.env
+
+# Ignorar pastas de "build" (ficheiros gerados automaticamente)
+dist/
+build/

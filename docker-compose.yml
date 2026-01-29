@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  # Serviço do Banco de Dados
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_DATABASE: meubanco
+      MYSQL_ROOT_PASSWORD: RcL,1230
+    volumes:
+      - db_data:/var/lib/mysql
+
+  # Serviço do Site (Python/Flask)
+  web:
+    build: ./apps
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_USER: root
+      DB_PASSWORD: RcL,1230
+      DB_NAME: meubanco
+      ports: "3306:3306"
+
+  # NOVO: Serviço de Túnel (Cloudflare)
+  tunnel:
+    image: cloudflare/cloudflared:latest
+    command: tunnel --url http://web:5000
+    depends_on:
+      - web
+
+volumes:
+  db_data:
