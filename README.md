@@ -41,3 +41,5 @@ Siga este passo a passo para trabalhar no projeto:
 | `git status` | **Status** | Mostra arquivos alterados e pendentes. |
 | `git add .` | **Preparar** | Adiciona todas as mudanças para serem salvas. |
 | `git commit -m "msg"` | **Salvar** | Cria um ponto na história com uma mensagem explicativa. |
+| `git push` | **Enviar** | Envia suas alterações locais para o repositório remoto (GitHub). |
+| `git pull` | **Baixar** | Traz as atualizações do GitHub para o seu computador. |
