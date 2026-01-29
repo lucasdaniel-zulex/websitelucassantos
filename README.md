@@ -1,6 +1,6 @@
 * https://docs.docker.com/desktop/setup/install/windows-install/
 
-docker compose up -d	-> sobe o ambiente
+<br>docker compose up -d	-> sobe o ambiente<br/>
 docker compose down -> derruba o ambiente
 docker compose stop -> para a execução
 docker compose biuld -> recria a imagem do zero
